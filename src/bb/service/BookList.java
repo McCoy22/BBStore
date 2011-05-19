@@ -10,9 +10,9 @@ public class BookList {
 	private HashMap<String, Book> books = new HashMap<String, Book>();
 	
 	private BookList () {
-		books.put("123", new Book ("123", "Testbuch", "Ansgar Meyer-Otte", 10));
+		books.put("123", new Book ("123", "Testbuch", "Hein Blöd", 10));
 		books.put("456", new Book ("456", "Java", "James Gosling", 1));
-		books.put("789", new Book ("789", "Tagebuch", "Ansgar Meyer-Otte", 999));
+		books.put("789", new Book ("789", "Tagebuch", "Anne Frank", 99));
 	}
 
 	

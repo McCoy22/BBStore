@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import bb.service.Book;
 import bb.service.BookList;
+import bb.web.WebUtil;
 
 /**
  * Servlet implementation class BookDetail
@@ -24,7 +25,7 @@ public class BookDetail extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 
-		BookList list = BookList.getInstance();
+		BookList list = WebUtil.getBookList(this.getServletContext());
 		String isbn = request.getParameter("isbn");
 
 		PrintWriter out = response.getWriter();

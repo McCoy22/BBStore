@@ -57,4 +57,7 @@
     <servlet-name>ShowCart</servlet-name>
     <url-pattern>/ShowCart</url-pattern>
   </servlet-mapping>
+  <listener>
+  	<listener-class>bb.web.MyServletContextListener</listener-class>
+  </listener>
 </web-app>

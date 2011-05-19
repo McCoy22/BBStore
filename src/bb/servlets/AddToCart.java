@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import bb.domain.ShoppingCart;
 import bb.service.Book;
 import bb.service.BookList;
+import bb.web.WebUtil;
 
 /**
  * Servlet implementation class AddToCart
@@ -25,7 +26,6 @@ public class AddToCart extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 
-		BookList list = BookList.getInstance();
 		String isbn = request.getParameter("isbn");
 
 		PrintWriter out = response.getWriter();
@@ -36,6 +36,7 @@ public class AddToCart extends HttpServlet {
 			return;
 		}
 		
+		BookList list = WebUtil.getBookList(this.getServletContext());
 		Book book = list.getBook(isbn);
 		
 		if (book == null) {
