@@ -8,6 +8,7 @@ public class BookListTest {
 	public static void main (String[] args) {
 		BookList list = BookList.getInstance();
 		
+		// Kommentar
 		for (Book buch : list.getBooks()) {
 			System.out.println(buch);
 		}
